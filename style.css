@@ -1,0 +1,32 @@
+
+        h1 {
+            background-color: aqua; 
+            }
+
+        img{
+            size: 50px;
+            }
+
+        nav {
+            text-align: right;
+            height: 100px;
+            background-color: blue;
+        }
+
+        nav img{
+            float:left;
+        }
+        
+        li {
+            display: inline;
+            margin-right: 30px;
+            font-size: 70px;
+        }
+
+        .trivia{
+            font-size: 50px;
+        }
+
+        body{
+            text-align: center;
+        }
