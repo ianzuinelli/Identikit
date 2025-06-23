@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    color: #6E88FA;
+    background-color: #6EFAE6;
+}
+a {
+    text-decoration: none;
+}
+a {
+    color: #6E88FA;
+}
+h2{
+    background-color: #6BE0FA;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+h1{
+    background-color: #6BE0FA;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
