@@ -172,3 +172,31 @@ img{
     transform: translateY(5px);
     box-shadow: 0 0 0 #5d27ae;
   }
+
+  @media (max-width: 768px) {
+  main{
+    flex-direction: column;
+  }
+  section{
+  width: 100%;
+}
+aside{
+  width: 100%;
+}
+h1{
+  font-size: 2.5em;
+}
+ul li{
+  font-size: 10px;
+  margin-right: 7px;
+  margin-left: 5px;
+}
+div button{
+  margin: 10px;
+}
+
+}
+main input{
+  display: flex;
+  flex-direction: column;
+}

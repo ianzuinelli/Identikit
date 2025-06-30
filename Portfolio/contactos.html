@@ -6,6 +6,49 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="Portfolio.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "wY-aSQWrlJzIl0kSj",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'template_8yc5z55', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        
+            function mostrarMensajeEnviado() {
+                // Elimina mensaje anterior si existe
+                const mensajeExistente = document.getElementById('mensaje-enviado');
+                if (mensajeExistente) {
+                    mensajeExistente.remove();
+                }
+                // Crea y muestra el mensaje
+                const mensaje = document.createElement('p');
+                mensaje.id = 'mensaje-enviado';
+                mensaje.textContent = 'Mensaje enviado';
+                mensaje.style.color = 'green';
+                mensaje.style.textAlign = 'center';
+                mensaje.style.fontWeight = 'bold';
+                document.querySelector('main').appendChild(mensaje);
+            }
+
+            document.getElementById('contact-form').addEventListener('submit', function() {
+                mostrarMensajeEnviado();
+            });
+        }
+    </script>
 </head>
 <body class="comfortaa-font">
     <header>
@@ -23,18 +66,19 @@
     </header>
     <main>
         <h2 style="text-align: center;">Bienvenido a la seccion de contacto. Aqui podras enviarme un mail para cualquier consulta que tengas.</h2>
-       <form style="display: flex; flex-direction: column;" action="mailto:ignacio@gmail.com" method="post" enctype="text/plain">
-            <center><p style="font-size: 20px;">Nombre:</p></center>
-            <center><input type="text" id="name" name="name" required></center>
-
-            <center><p style="font-size: 20px;">Email:</p></center>
-            <center><input type="email" id="email" name="email" required></center>
-
-            <center><p style="font-size: 20px;">Mensaje:</p></center>
-            <center><textarea id="message" name="message" rows="4" required></textarea></center>
-
-            <center><button style="margin-top: 40px; margin-bottom: 40px;" type="submit" class="btn-border-animation">Enviar</button></center>
-        </form>
+        <form id="contact-form">
+        <!-- To simplify the tutorial, the value is static. -->
+        <center><input type="hidden" name="time" value="Mar 10 2025 08:46">
+        <label>Name</label>
+        <input type="text" name="name" required style="margin-bottom: 20px;">
+        <label>Email</label>
+        <input type="email" name="email" required style="margin-bottom: 20px;">
+        <label>Subject</label>
+        <input type="text" name="title" required style="margin-bottom: 20px;">
+        <p style="font-size: 18px;">Message</p>
+        <center><textarea name="message" required style="margin-bottom: 40px;"></textarea></center>
+        <center><button class="btn-border-animation" type="submit" value="Send" style="margin-bottom: 40px;">Enviar</button></center>
+    </form>
     </main>
     <footer>
         <p>© 2025 Ignacio Anzuinelli. Todos los derechos reservados.</p>
