@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="Portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+</head>
+<body >
+  <div class="hero-slider">
+    <div class="slider-container">
+      <div class="slide active" style="background-image: url('imagen1.png');"></div>
+      <div class="slide" style="background-image: url('imagen2.png');"></div>
+      <div class="slide" style="background-image: url('imagen3.png');"></div>
+      <div class="slide" style="background-image: url('imagen4.png');"></div>
+      <div class="slide" style="background-image: url('imagen5.png');"></div>
+    </div>
+    <button class="nav-btn prev-btn">&lt;</button>
+    <button class="nav-btn next-btn">&gt;</button>
+    <div class="dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+    </div>
+  </div>
+  <center><footer style="margin-top: 50px; font-family: 'Comfortaa', sans-serif;">Slider con varias imagenes generadas con IA</footer></center>
+  <center><a href="index.html"><button style="margin-top: 40px; margin-bottom: 40px;" type="submit" class="btn-border-animation">Volver</button></a></center>
+  <script src="script.js"></script>
+</body>
+</html>

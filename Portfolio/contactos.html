@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="Portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+</head>
+<body class="comfortaa-font">
+    <header>
+        <nav>
+            <ul>
+                <h1>Portfolio</h1>
+                <li><a href="/Portfolio/Index.html"><button class="btn-border-animation">Home</button></a></li>
+                <li><a href="/Portfolio/sobre_mi.html"><button class="btn-border-animation">Sobre mi</button></a></li>
+                <li><a href="/Portfolio/proyectos.html"><button class="btn-border-animation">Proyectos</button></a></li>
+                <li><a href="/Portfolio/CV.html"><button class="btn-border-animation">CV</button></a></li>
+                <li><button class="btn-border-animation">Contacto</button></li>
+                <li><a href="../index.html"><button class="btn-border-animation">Linktree</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 style="text-align: center;">Bienvenido a la seccion de contacto. Aqui podras enviarme un mail para cualquier consulta que tengas.</h2>
+       <form style="display: flex; flex-direction: column;" action="mailto:ignacio@gmail.com" method="post" enctype="text/plain">
+            <center><p style="font-size: 20px;">Nombre:</p></center>
+            <center><input type="text" id="name" name="name" required></center>
+
+            <center><p style="font-size: 20px;">Email:</p></center>
+            <center><input type="email" id="email" name="email" required></center>
+
+            <center><p style="font-size: 20px;">Mensaje:</p></center>
+            <center><textarea id="message" name="message" rows="4" required></textarea></center>
+
+            <center><button style="margin-top: 40px; margin-bottom: 40px;" type="submit" class="btn-border-animation">Enviar</button></center>
+        </form>
+    </main>
+    <footer>
+        <p>© 2025 Ignacio Anzuinelli. Todos los derechos reservados.</p>
+        <p>Mail: ignacio@gmail.com</p>
+        <p>Teléfono: +1234567890</p>
+    </footer>
+</body>
+</html>
