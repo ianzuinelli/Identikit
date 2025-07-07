@@ -1,0 +1,23 @@
+h1{
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    font-family: 'UndertaleFont';
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    padding: 1rem;
+}
+img{
+    width: 600px;
+    height: auto;
+    margin-bottom: 40px;
+}
+div a p{
+    font-family: 'Sixtyfour Convergence', sans-serif;
+    margin: 3rem;
+    font-size: 2rem;;
+}
+p{
+    margin-left: 40px;
+    margin-right: 40px;
+}
